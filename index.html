@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Ryan Rupea Portfolio</title>
+<meta name="description" content="Ryan Rupea, Computer Science student at BYU–Hawaii. AI tools, web apps and the projects behind them.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <span class="handle">ryan.rupea</span>
+    <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch light or dark theme">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+    </button>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- PROFILE HEADER -->
+  <section class="profile">
+    <button class="avatar-ring" type="button" data-story="about" aria-label="Open About story">
+      <img src="images/ryan-headshot.jpg" alt="Ryan Rupea" width="720" height="720">
+    </button>
+
+    <div class="profile-main">
+      <div class="profile-top">
+        <h1 class="username">ryan.rupea</h1>
+        <div class="profile-actions">
+          <button class="pbtn pbtn-blue" type="button" data-story="contact">Contact</button>
+          <a class="pbtn" href="https://github.com/NayrHigh" target="_blank" rel="noopener">GitHub</a>
+          <a class="pbtn" href="https://www.linkedin.com/in/ryan-rupea-bb768327b" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+
+      <ul class="stats">
+        <li><b>3</b> projects</li>
+        <li><b>4</b> roles</li>
+        <li><b>2</b> minors</li>
+      </ul>
+
+      <div class="bio">
+        <p class="bio-name">Ryan Rupea</p>
+        <p class="bio-cat">Computer Science student</p>
+        <p>BYU–Hawaii · Class of 2028</p>
+        <p>Tahiti → Hawaiʻi · French &amp; English</p>
+        <p>Building AI tools and web apps with Python, Java, SQL &amp; JavaScript</p>
+        <p>Open to software engineering internships</p>
+        <a class="bio-link" href="https://github.com/NayrHigh" target="_blank" rel="noopener">github.com/NayrHigh</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <nav class="highlights" aria-label="Highlights">
+    <button type="button" data-story="skills"><span class="hl-ring"><span class="hl-in hl-a">&lt;/&gt;</span></span><span class="hl-label">Skills</span></button>
+    <button type="button" data-story="experience"><span class="hl-ring"><span class="hl-in hl-b">★</span></span><span class="hl-label">Experience</span></button>
+    <button type="button" data-story="education"><span class="hl-ring"><span class="hl-in hl-c">B.S.</span></span><span class="hl-label">Education</span></button>
+    <button type="button" data-story="about"><span class="hl-ring"><img class="hl-img" src="images/ryan-performing.jpg" alt=""></span><span class="hl-label">About</span></button>
+    <button type="button" data-story="contact"><span class="hl-ring"><span class="hl-in hl-d">@</span></span><span class="hl-label">Contact</span></button>
+  </nav>
+
+  <!-- TABS -->
+  <div class="tabs" role="tablist" aria-label="Filter posts">
+    <button type="button" role="tab" id="tab-all" class="active" data-filter="all" aria-selected="true">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg>Posts</button>
+    <button type="button" role="tab" id="tab-projects" data-filter="project" aria-selected="false">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg>Projects</button>
+    <button type="button" role="tab" id="tab-exp" data-filter="experience" aria-selected="false">
+      <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></svg>Experience</button>
+  </div>
+
+  <!-- GRID (filled by script.js) -->
+  <section class="grid" id="grid" aria-label="Posts"></section>
+
+  <footer class="footer">
+    <span>© 2026 Ryan Rupea</span>
+    <span>Hand-built with HTML, CSS &amp; JavaScript</span>
+  </footer>
+</main>
+
+<!-- POST MODAL -->
+<div class="overlay" id="postOverlay" hidden>
+  <button class="close-x" type="button" data-close aria-label="Close">✕</button>
+  <button class="nav-arrow nav-prev" type="button" id="postPrev" aria-label="Previous post">‹</button>
+  <button class="nav-arrow nav-next" type="button" id="postNext" aria-label="Next post">›</button>
+  <article class="post" role="dialog" aria-modal="true" aria-labelledby="postTitle">
+    <div class="post-media" id="postMedia"></div>
+    <div class="post-side">
+      <header class="post-head">
+        <img src="images/ryan-headshot.jpg" alt="" class="mini-avatar">
+        <div><b>ryan.rupea</b><span id="postPlace"></span></div>
+      </header>
+      <div class="post-caption">
+        <h2 id="postTitle"></h2>
+        <div id="postBody"></div>
+        <p class="post-tags" id="postTags"></p>
+      </div>
+      <div class="post-foot" id="postLinks"></div>
+    </div>
+  </article>
+</div>
+
+<!-- STORY VIEWER -->
+<div class="story-overlay" id="storyOverlay" hidden>
+  <div class="story" role="dialog" aria-modal="true" aria-label="Story">
+    <div class="story-bars" id="storyBars"></div>
+    <header class="story-head">
+      <img src="images/ryan-headshot.jpg" alt="" class="mini-avatar">
+      <b>ryan.rupea</b><span id="storyName"></span>
+      <button class="story-close" type="button" data-close-story aria-label="Close story">✕</button>
+    </header>
+    <div class="story-slide" id="storySlide"></div>
+    <button class="story-tap story-tap-l" type="button" id="storyBack" aria-label="Previous"></button>
+    <button class="story-tap story-tap-r" type="button" id="storyFwd" aria-label="Next"></button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
