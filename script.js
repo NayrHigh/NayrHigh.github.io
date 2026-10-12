@@ -9,7 +9,7 @@ const POSTS = [
   {
     id: 'supply', cat: 'project', pinned: true, label: ['AI · RAG', 'Supply Sensei'], pos: '20% center',
     hover: 'Supply Sensei · AI study assistant',
-    media: [{ img: 'images/supply-sensei.jpg', alt: 'Supply Sensei chat interface' }],
+    media: [{ img: 'supply-sensei.jpg', alt: 'Supply Sensei chat interface' }],
     title: 'Supply Sensei',
     place: 'Built for a client · AI / RAG',
     body: `
@@ -29,10 +29,10 @@ const POSTS = [
     id: 'destriva', cat: 'project', pinned: true, label: ['Web app', 'Destriva'], pos: '35% center',
     hover: 'Destriva · Wedding planning web app',
     media: [
-      { img: 'images/destriva-home.jpg', alt: 'Destriva dashboard' },
-      { img: 'images/destriva-budget.jpg', alt: 'Destriva budget page with SVG donut charts' },
-      { img: 'images/destriva-vendors.jpg', alt: 'Destriva vendor board' },
-      { img: 'images/destriva-onboarding.jpg', alt: 'Destriva onboarding form' }
+      { img: 'destriva-home.jpg', alt: 'Destriva dashboard' },
+      { img: 'destriva-budget.jpg', alt: 'Destriva budget page with SVG donut charts' },
+      { img: 'destriva-vendors.jpg', alt: 'Destriva vendor board' },
+      { img: 'destriva-onboarding.jpg', alt: 'Destriva onboarding form' }
     ],
     title: 'Destriva',
     place: 'Solo personal project · Web app',
@@ -69,7 +69,7 @@ const POSTS = [
   {
     id: 'huki', cat: 'experience', label: ['Jan 2025 – Apr 2026', 'Huki & Night Show'], pos: '30% center',
     hover: 'Huki & Night Show · Section lead',
-    media: [{ img: 'images/ryan-huki.jpg', alt: 'Ryan performing on a canoe during the Huki show' }],
+    media: [{ img: 'ryan-huki.jpg', alt: 'Ryan performing on a canoe during the Huki show' }],
     title: 'Huki & Night Show Performer',
     place: 'Jan 2025 – Apr 2026',
     body: `
@@ -81,7 +81,7 @@ const POSTS = [
   {
     id: 'village', cat: 'experience',
     hover: 'Tahiti Village · Cultural guide', label: ['May 2024 – Jan 2025', 'Tahiti Village Performer'], pos: 'center 20%',
-    media: [{ img: 'images/ryan-performing.jpg', alt: 'Ryan performing in a Tahitian feather and shell headdress' }],
+    media: [{ img: 'ryan-performing.jpg', alt: 'Ryan performing in a Tahitian feather and shell headdress' }],
     title: 'Tahiti Village Performer',
     place: 'May 2024 – Jan 2025',
     body: `
@@ -155,8 +155,8 @@ const STORIES = {
     `<span class="s-kicker">Lycée Diadème · Tahiti</span><h3>Scientific Baccalaureate</h3><p>Engineering Science · 2019</p>`
   ]},
   about: { name: 'About', cls: 's-sand', slides: [
-    `<img src="images/ryan-headshot.jpg" alt="Ryan Rupea"><h3>Ia ora na!</h3><p>CS student at BYU–Hawaii, from Tahiti. French &amp; English.</p>`,
-    `<img src="images/ryan-performing.jpg" alt="Ryan performing"><h3>Beyond the code</h3><p>Two years on stage taught me to read a room, explain things clearly and lead a team.</p>`
+    `<img src="ryan-headshot.jpg" alt="Ryan Rupea"><h3>Ia ora na!</h3><p>CS student at BYU–Hawaii, from Tahiti. French &amp; English.</p>`,
+    `<img src="ryan-performing.jpg" alt="Ryan performing"><h3>Beyond the code</h3><p>Two years on stage taught me to read a room, explain things clearly and lead a team.</p>`
   ]},
   contact: { name: 'Contact', cls: '', slides: [
     `<span class="s-kicker">Let's talk</span><h3>Open to SWE internships</h3><p class="s-email">${EMAIL}</p><div class="s-btns"><button class="s-btn" type="button" data-copy="${EMAIL}">Copy email</button><a class="s-btn" href="${LI}" target="_blank" rel="noopener">LinkedIn</a><a class="s-btn" href="${GH}" target="_blank" rel="noopener">GitHub</a></div>`
